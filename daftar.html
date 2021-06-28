@@ -9,7 +9,7 @@
     <meta name="author" content="Kelompok 3 E-Commerce" />
     <meta name="email" content="conmask.tie@gmail.com" />
     <meta name="version" content="v1.0" />
-    <title>Masuk | Conmask-Tie</title>
+    <title>Daftar | Conmask-Tie</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
@@ -42,30 +42,69 @@
     <div class="back-to-home rounded d-none d-sm-block">
       <a href="index.html" class="btn btn-icon btn-soft-primary"><i data-feather="home" class="icons"></i></a>
     </div>
-    <!-- Awal Section Login -->
-    <section class="bg-home d-flex align-items-center">
+    <!-- Awal Section Daftar -->
+    <section class="bg-auth-home d-table w-100">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-7 col-md-6">
             <div class="me-lg-5">
-              <img src="assets/images/auth/login.svg" class="img-fluid d-block mx-auto" alt="" />
+              <img src="assets/images/auth/daftar.svg" class="img-fluid d-block mx-auto" alt="" />
             </div>
           </div>
           <div class="col-lg-5 col-md-6">
-            <div class="card login-page bg-white shadow rounded border-0">
+            <div class="card shadow rounded border-0">
               <div class="card-body">
-                <h4 class="card-title text-center">Login</h4>
+                <h4 class="card-title text-center">Daftar</h4>
                 <form method="POST" action="index.html" class="login-form mt-4">
+                  <input type="hidden" name="tujuan" value="DAFTAR" />
                   <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-md-12">
                       <div class="mb-3">
-                        <label class="form-label">Email <span class="text-danger">*</span></label>
+                        <label class="form-label">Nama Lengkap <span class="text-danger">*</span></label>
                         <div class="form-icon position-relative">
                           <i data-feather="user" class="fea icon-sm icons"></i>
                           <input
+                            type="text"
+                            class="form-control ps-5"
+                            placeholder="Masukan Nama Lengkap Anda"
+                            name="nama"
+                            required
+                            oninvalid="this.setCustomValidity('Nama Lengkap tidak boleh kosong')"
+                            oninput="setCustomValidity('')"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <!--end col-->
+
+                    <div class="col-md-12">
+                      <div class="mb-3">
+                        <label class="form-label">Username <span class="text-danger">*</span></label>
+                        <div class="form-icon position-relative">
+                          <i data-feather="user-check" class="fea icon-sm icons"></i>
+                          <input
+                            type="text"
+                            class="form-control ps-5"
+                            placeholder="Masukan Username Anda"
+                            name="username"
+                            required
+                            oninvalid="this.setCustomValidity('Username tidak boleh kosong')"
+                            oninput="setCustomValidity('')"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <!--end col-->
+
+                    <div class="col-md-12">
+                      <div class="mb-3">
+                        <label class="form-label">Email Anda <span class="text-danger">*</span></label>
+                        <div class="form-icon position-relative">
+                          <i data-feather="mail" class="fea icon-sm icons"></i>
+                          <input
                             type="email"
                             class="form-control ps-5"
-                            placeholder="alamat@email.com"
+                            placeholder="Masukan Email Anda"
                             name="email"
                             required
                             oninvalid="this.setCustomValidity('Email tidak boleh kosong')"
@@ -75,7 +114,8 @@
                       </div>
                     </div>
                     <!--end col-->
-                    <div class="col-lg-12">
+
+                    <div class="col-md-12">
                       <div class="mb-3">
                         <label class="form-label">Password <span class="text-danger">*</span></label>
                         <div class="form-icon position-relative">
@@ -83,7 +123,7 @@
                           <input
                             type="password"
                             class="form-control ps-5"
-                            placeholder="Masukan password"
+                            placeholder="Masukan Password Anda"
                             required
                             oninvalid="this.setCustomValidity('Password tidak boleh kosong')"
                             oninput="setCustomValidity('')"
@@ -92,42 +132,41 @@
                       </div>
                     </div>
                     <!--end col-->
-                    <div class="col-lg-12">
-                      <div class="d-flex justify-content-between">
-                        <div class="mb-3">
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                            <label class="form-check-label" for="flexCheckDefault">Ingat saya</label>
-                          </div>
+
+                    <div class="col-md-12">
+                      <div class="mb-3">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                          <label class="form-check-label" for="flexCheckDefault">Saya menyetujui <a href="#" class="text-primary">Syarat dan Ketentuan</a></label>
                         </div>
-                        <p class="forgot-pass mb-0"><a href="lupa.html" class="text-dark fw-bold">Lupa password ?</a></p>
                       </div>
                     </div>
                     <!--end col-->
 
-                    <div class="col-lg-12 mb-0">
+                    <div class="col-md-12">
                       <div class="d-grid">
-                        <button class="btn btn-primary" type="submit">Masuk</button>
+                        <button class="btn btn-primary" type="submit">Daftar</button>
                       </div>
                     </div>
                     <!--end col-->
-                    <div class="col-12 text-center">
-                      <p class="mb-0 mt-3"><small class="text-dark me-2">Belum Punya akun ?</small> <a href="daftar.html" class="text-dark fw-bold">Daftar</a></p>
+
+                    <div class="mx-auto">
+                      <p class="mb-0 mt-3"><small class="text-dark me-2">Sudah memiliki akun ?</small> <a href="login.html" class="text-dark fw-bold">Masuk</a></p>
                     </div>
-                    <!--end col-->
                   </div>
                   <!--end row-->
                 </form>
               </div>
             </div>
-            <!---->
           </div>
           <!--end col-->
         </div>
         <!--end row-->
       </div>
-      <!-- Akhir Container -->
+      <!--end container-->
     </section>
+    <!--end section-->
+    <!-- Hero End -->
     <!-- Akhir Section Login -->
 
     <!-- :::::::::::::: Awal File Javascript Disini :::::::::::::: -->
